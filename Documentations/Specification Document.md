@@ -2,23 +2,22 @@
 
 ## Purpose
 
-The goal of this project is to develop a chess-playing AI using Python.  
+The goal of this project is to build a chess website where the user can make an account, play daily chess against other players, and start a live game against a chess-playing AI using Python.  
 The AI evaluates given chess positions and selects the optimal move using the minimax algorithm with alpha–beta pruning.
 
-This project focuses on learning game AI techniques, decision trees, and search optimization.
+This project focuses on learning to program a chess game, create game AI techniques, decision trees, search optimization, and database management.
 
 
 ## Users
 
-There is only one user role:
-
-- User who inputs a chess position and receives the best move suggestion.
+There can be many users that can play chess against each other leaving a move when they login. They can also play live games against an AI.
 
 
 ## Planned Functionality
 
 ### Core Functionality
-
+- Develop a database to hold the players' account data and the games they play
+- methods and interfaces for users to create account and play
 - Represent an 8×8 chessboard internally
 - Generate possible moves for the current position
 - Implement the minimax algorithm
@@ -51,3 +50,4 @@ Theoretical complexity: O(b^(d/2))
 - https://en.wikipedia.org/wiki/Alpha%E2%80%93beta_pruning  
 - https://indiaai.gov.in/article/understanding-the-minmax-algorithm-in-ai  
 - https://stackoverflow.com/questions/16328690/how-do-you-derive-the-time-complexity-of-alpha-beta-pruning
+
