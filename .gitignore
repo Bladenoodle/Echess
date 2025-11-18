@@ -209,3 +209,7 @@ __marimo__/
 __pycache__
 .coverage
 htmlcov
+
+#Own
+.DS_Store
+database.db
