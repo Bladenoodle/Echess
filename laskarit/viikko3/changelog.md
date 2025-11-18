@@ -4,3 +4,5 @@
 - Käyttäjä voi luoda käyttäjän
 - Käyttäjä voi kirjautua sisään ja ulos nettisivuun käyttäjätunnuksella
 - Shakkitoiminto aloitettu
+
+Aikaa käytetty: 10 tuntia
