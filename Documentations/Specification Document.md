@@ -16,14 +16,14 @@ There can be many users that can play chess against each other leaving a move wh
 ## Planned Functionality
 
 ### Core Functionality
-- Develop a database to hold the players' account data and the games they play
-- methods and interfaces for users to create account and play
-- Represent an 8×8 chessboard internally
-- Generate possible moves for the current position
+- Develop a database to hold the players' account data and the games they play (player database done!)
+- methods and interfaces for users to create account and play (create account done!)
+- Represent an 8×8 chessboard internally (done!)
+- Generate possible moves for the current position (half done!)
 - Implement the minimax algorithm
 - Optimize the search with alpha–beta pruning
 - Input format:
-  - 8×8 board state (list or matrix structure)  
+  - 8×8 board state (list or matrix structure)
   - Turn indicator
 - Output: best move for the current side
 
@@ -50,4 +50,5 @@ Theoretical complexity: O(b^(d/2))
 - https://en.wikipedia.org/wiki/Alpha%E2%80%93beta_pruning  
 - https://indiaai.gov.in/article/understanding-the-minmax-algorithm-in-ai  
 - https://stackoverflow.com/questions/16328690/how-do-you-derive-the-time-complexity-of-alpha-beta-pruning
+
 
