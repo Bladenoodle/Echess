@@ -2,7 +2,7 @@
 
 Alku parhaalle ***shakki*** nettisivulle (ehkä).
 
-Viikko 3 changelog:
+Changelog:
 https://github.com/Bladenoodle/Echess/blob/main/laskarit/viikko3/changelog.md
 
 ### Asennus
@@ -10,6 +10,11 @@ https://github.com/Bladenoodle/Echess/blob/main/laskarit/viikko3/changelog.md
 Asenna riippuvuudet komennolla:
 ```
 Poetry install
+```
+
+Luo database:
+```
+database.db < schema.sql
 ```
 
 Nettisivun voi avata komennolla:
