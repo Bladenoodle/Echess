@@ -1,7 +1,7 @@
 """This module is for unit testing basic functionalities of the website"""
 
 import pytest
-from chess import (
+from chess_files.chess import (
     create_board, is_empty, is_black, is_white, same_color, diff_color,
     own_piece, dir, in_bounds, copy_board, pawn_moves,
     WHITE, BLACK

@@ -1,7 +1,8 @@
 from invoke import task
-
+from database_files.db import init_db
 @task
 def start(ctx):
+    init_db()
     ctx.run("python3 src/index.py", pty=True)
 
 @task

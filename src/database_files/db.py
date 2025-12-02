@@ -1,4 +1,5 @@
 import sqlite3
+from pathlib import Path
 
 def get_connection():
     con = sqlite3.connect("database.db")
@@ -27,3 +28,13 @@ def query(sql, params=None):
     result = con.execute(sql, params).fetchall()
     con.close()
     return result
+
+def init_db():
+    db_path = Path("database.db")
+    if db_path.exists():
+        return
+
+    with sqlite3.connect(db_path) as con:
+        con.execute("PRAGMA foreign_keys = ON")
+        with open("src/database_files/schema.sql") as f:
+            con.executescript(f.read())
