@@ -6,3 +6,10 @@
 - Shakkitoiminto aloitettu
 
 Aikaa käytetty: 10 tuntia
+
+## Viikko 4
+
+- Shakki laudan perustoiminnot puoliksi valmiita
+- Uusien toimintojen testit kunnossa
+
+Aikaa käytetty: 13 tuntia
