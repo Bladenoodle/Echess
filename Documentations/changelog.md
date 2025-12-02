@@ -13,3 +13,7 @@ Aikaa käytetty: 10 tuntia
 - Uusien toimintojen testit kunnossa
 
 Aikaa käytetty: 13 tuntia
+
+## Viikko 5
+- Shakki perustoiminnat 90% valmiita
+- database automaattisesti alustettu
