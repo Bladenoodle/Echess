@@ -1,7 +1,10 @@
+"""Module for invoke tasks"""
 from invoke import task
-from database_files.db import init_db
+from src.database_files.db import init_db
+
 @task
 def start(ctx):
+    """Run the program and initialize database if database doesn't exist"""
     init_db()
     ctx.run("python3 src/index.py", pty=True)
 

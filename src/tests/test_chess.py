@@ -1,23 +1,23 @@
-"""This module is for unit testing basic functionalities of the website"""
+"""Unit tests for chess functionalities"""
 
-import pytest
 from chess_files.chess import (
-    create_board, is_empty, is_black, is_white, same_color, diff_color,
-    own_piece, dir, in_bounds, copy_board, pawn_moves,
-    WHITE, BLACK
+    create_board, is_empty, is_black, is_white,
+    same_color, diff_color, own_piece, pawn_direction,
+    in_bounds, copy_board, pawn_moves, make_move,
+    is_legal_move, WHITE, BLACK
 )
 
 def test_if_create_board_works():
     board = create_board()
     assert board == [
-    ["r", "n", "b", "q", "k", "b", "n", "r"],
-    ["p", "p", "p", "p", "p", "p", "p", "p"],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    ["P", "P", "P", "P", "P", "P", "P", "P"],
-    ["R", "N", "B", "Q", "K", "B", "N", "R"],
+        ["r", "n", "b", "q", "k", "b", "n", "r"],
+        ["p", "p", "p", "p", "p", "p", "p", "p"],
+        [0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0],
+        ["P", "P", "P", "P", "P", "P", "P", "P"],
+        ["R", "N", "B", "Q", "K", "B", "N", "R"],
     ]
 
 def test_is_empty():
@@ -53,9 +53,9 @@ def test_own_piece():
     assert own_piece("p", BLACK)
     assert not own_piece("R", BLACK)
 
-def test_dir_function():
-    assert dir(WHITE) == -1
-    assert dir(BLACK) == 1
+def test_pawn_direction():
+    assert pawn_direction(WHITE) == -1
+    assert pawn_direction(BLACK) == 1
 
 def test_in_bounds():
     assert in_bounds(0, 0)
@@ -99,3 +99,24 @@ def test_pawn_moves_black_capture():
     board[2][1] = "P"
     moves = pawn_moves(board, 0, 1, BLACK)
     assert ((0,1),(1,2)) in moves
+
+def test_make_move_normal():
+    board = create_board()
+    new_board = make_move(board, ((0,6),(0,5)))
+    assert new_board[6][0] == 0
+    assert new_board[5][0] == "P"
+
+def test_make_move_capture():
+    board = create_board()
+    board[5][1] = "p"
+    new_board = make_move(board, ((0,6),(1,5)))
+    assert new_board[5][1] == "P"
+
+def test_is_legal_move_true():
+    board = create_board()
+    assert is_legal_move(board, WHITE, ((0,6),(0,5)))
+
+def test_is_legal_move_false():
+    board = create_board()
+    assert not is_legal_move(board, WHITE, ((0,6),(1,6)))
+
